@@ -1,0 +1,66 @@
+menu "Snake Game Configuration"
+
+    orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
+
+    config SNAKE_LED_GPIO
+        int "Snake LED GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 5
+        help
+            GPIO number (IOxx) to control the LED matrix.
+
+    config SNAKE_LED_MATRIX_SIZE
+        int "Snake LED matrix size"
+        default 64
+        help
+            The size of the LED matrix.
+
+    config SNAKE_SPEED
+        int "Snake speed in ms"
+        range 10 3600000
+        default 200
+        help
+            Define the speed of the snake in milliseconds.
+
+    config BUTTON_UP
+        int "Button up GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 3
+        help
+            GPIO number (IOxx) to the button up.
+
+    config BUTTON_DOWN
+        int "Button down GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 2
+        help
+            GPIO number (IOxx) to the button down.
+
+    config BUTTON_LEFT
+        int "Button left GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 4
+        help
+            GPIO number (IOxx) to the button left.
+
+    config BUTTON_RIGHT
+        int "Button right GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 1
+        help
+            GPIO number (IOxx) to the button right.
+
+    config BUTTON_RESET
+        int "Button reset GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 0
+        help
+            GPIO number (IOxx) to the button reset.
+
+    config WALLS_ENABLED
+        bool "Enable walls"
+        default y
+        help
+            Enable walls around the snake game.
+
+endmenu
