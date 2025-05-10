@@ -1,0 +1,49 @@
+menu "Match 4 Configuration"
+
+    orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
+
+
+    config GPIO_DPAD_UP
+        int "GPIO DPAD up button"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 3
+        help
+            GPIO pin number to be used as GPIO_OUTPUT_IO_0.
+
+    config GPIO_DPAD_DOWN
+        int "GPIO DPAD down button"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 2
+        help
+            GPIO pin number to be used as GPIO_OUTPUT_IO_1.
+
+    config GPIO_DPAD_LEFT
+        int "GPIO DPAD left button"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 4
+        help
+            GPIO pin number to be used as GPIO_INPUT_IO_0.
+
+    config GPIO_DPAD_RIGHT
+        int "GPIO DPAD right button"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 1
+        help
+            GPIO pin number to be used as GPIO_INPUT_IO_1.
+
+    config GPIO_DPAD_BUTTON
+        int "GPIO DPAD button"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_IN_RANGE_MAX
+        default 0
+        help
+            GPIO pin number to be used as GPIO_INPUT_IO_1.
+
+    config LED_MATRIX
+        int "Blink GPIO number"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 5
+        help
+            GPIO number (IOxx) to blink on and off the LED.
+            Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+
+endmenu
