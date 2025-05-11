@@ -18,6 +18,10 @@ Project is using ESP-IDF framework (tested on 5.5, should work with at least 5.3
 > [!IMPORTANT]
 > There are at least two sizes of LED Matrix, so please make sure that yours match the dimensions or else the matrix will not fit into the 3D printed case.
 
+## 3D Printed Case
+
+You can find the case on printables: https://www.printables.com/model/1291377-led-matrix-game
+
 ## Wiring
 
 | GPIO | Device       |
